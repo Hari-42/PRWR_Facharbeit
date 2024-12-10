@@ -13,9 +13,6 @@
     <div class="container mx-auto flex items-center justify-between py-4 px-6 border-b border-gray-200">
         <h1 class="text-3xl font-bold text-blue-600">Silicon Valley</h1>
         <!-- Burger Menu Icon -->
-        <button id="menu-toggle" class="block md:hidden text-blue-600 focus:outline-none">
-            <ion-icon name="menu" size="large"></ion-icon>
-        </button>
         <!-- Navigation -->
         <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 md:items-center">
             <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
@@ -35,7 +32,7 @@
                     <a href="Fazit.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Fazit</a>
                 </li>
                 <li class="relative border-l md:border-none border-gray-300 md:pl-0 pl-4">
-                    <a href="team.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Team</a>
+                    <a href="quellen.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Quellen</a>
                 </li>
             </ul>
         </nav>
@@ -70,13 +67,12 @@
     <br>
 </main>
 
-
 <footer class="bg-blue-200">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
                 <div class="mb-6 md:mb-0">
-                    <a href="team.html" class="flex items-center">
+                    <a href="quellen.html" class="flex items-center">
                         <span class="self-center text-2xl font-bold whitespace-nowrap text-black">Code Core</span>
                     </a>
                 </div>
@@ -84,7 +80,7 @@
                     <h2 class="mb-6 text-2xl font-bold text-black">Rechtliches</h2>
                     <ul class="text-gray-800 font-medium">
                         <li>
-                            <a href='/PDF/Quellen.pdf' download='../pdf/Quellen.pdf' class='hover:text-white duration-300 ease-in-out'>Quellen</a>
+                            <a href="quellen.html" class='hover:text-white duration-300 ease-in-out'>Quellen</a>
                         </li>
                     </ul>
                 </div>
@@ -117,7 +113,7 @@
         </div>
         <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div class="flex justify-between items-center flex-wrap">
-            <span class="text-sm text-black-500 sm:text-center">© 2024 <a href="team.html" class="">Code Core</a> All Rights Reserved.</span>
+            <span class="text-sm text-black-500 sm:text-center">© 2024 <a href="quellen.html" class="">Code Core</a> All Rights Reserved.</span>
             <div class="flex mt-4 sm:mt-0">
                 <a class="ml-3" href="https://github.com/Hari-42/PRWR_Facharbeit">
                     <ion-icon class="text-3xl" name="logo-github"></ion-icon>
@@ -129,15 +125,7 @@
         </div>
     </div>
 </footer>
-<script>
-    // JavaScript to toggle menu visibility
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
 
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-</script>
 
 </body>
 </html>
