@@ -6,46 +6,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../script.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <title>Quellen</title>
 </head>
 <body class="bg-gray-100">
-
-
-<!-- Header (Same as in index.html) -->
-<header class="bg-white shadow-lg">
-    <div class="container mx-auto flex items-center justify-between py-4 px-6 border-b border-gray-200">
-        <h1 class="text-3xl font-bold text-blue-600">Silicon Valley</h1>
-        <!-- Burger Menu Icon -->
-        <button id="menu-toggle" class="block md:hidden text-blue-600 focus:outline-none">
-            <ion-icon name="menu" size="large"></ion-icon>
-        </button>
-        <!-- Navigation -->
-        <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 md:items-center">
-            <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
-                <li class="relative border-l md:border-none border-gray-300 md:pl-0 pl-4">
-                    <a href="index.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Home</a>
-                </li>
-                <li class="relative border-l md:border-none border-gray-300 md:pl-0 pl-4">
-                    <a href="siliconValley.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Silicon Valley</a>
-                </li>
-                <li class="relative border-l md:border-none border-gray-300 md:pl-0 pl-4">
-                    <a href="Zuerich.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Zürich</a>
-                </li>
-                <li class="relative border-l md:border-none border-gray-300 md:pl-0 pl-4">
-                    <a href="Vergleich.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Vergleich</a>
-                </li>
-                <li class="relative border-l md:border-none border-gray-300 md:pl-0 pl-4">
-                    <a href="Fazit.html" class="text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-200 transition font-semibold">Fazit</a>
-                </li>
-                <li class="relative">
-                    <a href="quellen.html" class="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-blue-200 transition font-semibold">Quellen</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <header class="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
+        <a href="./index.html" class="block px-4 py-3 text-3xl border-b-2" style="border-color: #2563eb;">Silicon Valley</a>
+        <ul id="links" class="hidden md:flex md:sticky md:top-0 md:z-50 bg-white shadow-md">
+            <li>
+                <a href="./index.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Home</a>
+            </li>
+            <li>
+            <a href="./siliconValley.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Silicon Valley</a>
+          </li>
+          <li>
+          <a href="./Zuerich.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Zürich</a>
+          </li>
+          <li>
+          <a href="./Vergleich.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Vergleich</a>
+          </li>
+          <li>
+            <a href="./Fazit.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Fazit</a>
+          </li>
+          <li>
+            <a href="./quellen.html" class="block bg-blue-200 px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Quellen</a>
+          </li>
+        </ul>
+        <a href="javascript:void(0);" class="block absolute top-0 right-0 px-4 py-3 md:hidden" onclick="toggleMenue()">
+          <i class="fa-solid fa-bars text-3xl"></i>
+        </a>
 </header>
-
-
 <main>
     <div style="background-color: #2563eb; height: 1px;"></div>
 
@@ -147,6 +138,9 @@
                         <li class="mb-4">
                             <a href="https://ionic.io/ionicons" class="hover:text-white duration-300 ease-in-out">Ionicons</a>
                         </li>
+                        <li class="mb-4">
+                            <a href="https://fontawesome.com" class="hover:text-white duration-300 ease-in-out">Font awesome</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -159,7 +153,7 @@
                             <a href='https://github.com/Hari-Gian' class='hover:text-white duration-300 ease-in-out'>Gian Hari - Developer, Designer & Writer</a>
                         </li>
                         <li>
-                            <a href='https://github.com/im23b-kuligm' class='hover:text-white duration-300 ease-in-out'>Mikolaj Kulig - Developer & Writer</a>
+                            <a href='https://github.com/MikolajKulig' class='hover:text-white duration-300 ease-in-out'>Mikolaj Kulig - Developer & Writer</a>
                         </li>
                     </ul>
                 </div>
@@ -181,13 +175,17 @@
 </footer>
 
 <script>
-    // JavaScript to toggle menu visibility
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+    function toggleMenue() {
+        var x = document.getElementById("links");
+        if (x.classList.contains("hidden")) {
+            x.classList.remove("hidden");
+            x.classList.add("block");
+        }
+        else {
+            x.classList.remove("block");
+            x.classList.add("hidden");
+        }
+    }
 </script>
 
 </body>
