@@ -6,41 +6,43 @@
     <script src="../script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <title>Silicon Valley</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
+    <title>Silicon Valley</title>
 </head>
 <body class="bg-gray-100">
-<header class="bg-white shadow-lg">
-    <div class="container mx-auto flex items-center justify-between py-4 px-6 border-b border-gray-200">
-        <h1 class="text-3xl font-bold text-blue-600">Silicon Valley</h1>
-        <nav>
-            <ul class="flex space-x-6">
-                <li class="relative">
-                    <a href="index.html" class="text-blue-500 hover:text-gray-500 transition font-medium">Home</a>
-                </li>
-                <li class="relative border-l border-gray-300 pl-4">
-                    <a href="siliconValley.html" class="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-blue-200 transition font-medium">Silicon Valley</a>
-                </li>
-                <li class="relative border-l border-gray-300 pl-4">
-                    <a href="Zuerich.html" class="text-blue-500 hover:text-gray-500 transition font-medium">Zürich</a>
-                </li>
-                <li class="relative border-l border-gray-300 pl-4">
-                    <a href="Vergleich.html" class="text-blue-500 hover:text-gray-500 transition font-medium">Vergleich</a>
-                </li>
-                <li class="relative border-l border-gray-300 pl-4">
-                    <a href="Fazit.html" class="text-blue-500 hover:text-gray-500 transition font-medium">Fazit</a>
-                </li>
-                <li class="relative border-l border-gray-300 pl-4">
-                    <a href="team.html" class="text-blue-500 hover:text-gray-500 transition font-medium">Team</a>
-                </li>
-            </ul>
-        </nav>
-        <div><img src="zürich_flagge.png" alt="Profilbild" class="w-20 h-20 rounded-full border-2 border-white shadow-lg"></div>
-    </div>
+<header class="bg-white shadow-lg fixed top-0 left-0 right-0 z-50">
+        <a href="./index.html" class="block px-4 py-3 text-3xl border-b-2" style="border-color: #2563eb;">Silicon Valley</a>
+        <ul id="links" class="hidden md:flex md:sticky md:top-0 md:z-50 bg-white shadow-md">
+            <li>
+                <a href="./index.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Home</a>
+            </li>
+            <li>
+            <a href="./siliconValley.html" class="block bg-blue-200 px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Silicon Valley</a>
+          </li>
+          <li>
+          <a href="./Zuerich.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Zürich</a>
+          </li>
+          <li>
+          <a href="./Vergleich.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Vergleich</a>
+          </li>
+          <li>
+            <a href="./Fazit.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Fazit</a>
+          </li>
+          <li>
+            <a href="./team.html" class="block px-4 py-3 text-lg hover:bg-blue-400 transition-colors">Team</a>
+          </li>
+        </ul>
+        <a href="javascript:void(0);" class="block absolute top-0 right-0 px-4 py-3 md:hidden" onclick="toggleMenue()">
+          <i class="fa-solid fa-bars text-3xl"></i>
+        </a>
+    
 </header>
 <main>
-    <div style="background-color: #2563eb; height: 1px;"></div>
-
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <h1 class="text-4xl font-bold text-gray-800 text-center">
@@ -209,5 +211,18 @@
         </div>
     </div>
 </footer>
+<script>
+    function toggleMenue() {
+        var x = document.getElementById("links");
+        if (x.classList.contains("hidden")) {
+            x.classList.remove("hidden");
+            x.classList.add("block");
+        }
+        else {
+            x.classList.remove("block");
+            x.classList.add("hidden");
+        }
+    }
+</script>
 </body>
 </html>
