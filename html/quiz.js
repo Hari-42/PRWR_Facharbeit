@@ -1,36 +1,58 @@
 const questions = [
     {
-        question: "Welche Stadt ist bekannt für ihre große Anzahl an Investoren?",
+        question: "Welche Szene ist bekannt für die innovativsten Start-ups?",
         answers: ["Zürich", "Silicon Valley", "Beide sind gleich", "Keine der beiden"],
         correctAnswer: 1
     },
     {
-        question: "Wo gibt es eine starke Forschung im Bereich Künstliche Intelligenz?",
+        question: "Wo gibt es einen starken Fokus auf nachhaltige Innovation?",
         answers: ["Zürich", "Silicon Valley", "Beide sind gleich", "Keine der beiden"],
         correctAnswer: 0
     },
     {
-        question: "Welche Stadt ist besonders stark in nachhaltigen Startups?",
+        question: "Welche Szene baut U-Boote?",
+        answers: ["Zürich", "Silicon Valley", "Beide sind gleich", "Keine der beiden"],
+        correctAnswer: 3
+    },
+    {
+        question: "Welcher Start-up gehört nicht zu den anderen?",
+        answers: ["Visa", "Scandit", "Cisco", "Wells Fargo"],
+        correctAnswer: 1
+    },
+    {
+        question: "Welche Szene ist fokussierter im Bereich Fintech und Blockchain?",
         answers: ["Silicon Valley", "Zürich", "Beide sind gleich", "Keine der beiden"],
         correctAnswer: 1
     },
     {
-        question: "Welche Stadt hat eine stabilere wirtschaftliche Umgebung für Startups?",
-        answers: ["Silicon Valley", "Zürich", "Beide sind gleich", "Keine der beiden"],
-        correctAnswer: 1
+        question: "Welcher Start-up wurde nicht bei Silicon Valley genannt?",
+        answers: ["Apple", "Zoom", "Microsoft", "Facebook"],
+        correctAnswer: 3
     },
     {
-        question: "Welche Stadt ist stärker im Bereich Fintech und Medtech?",
-        answers: ["Silicon Valley", "Zürich", "Beide sind gleich", "Keine der beiden"],
+        question: "Welches der genannten Unternehmen ist bekannt für Hardware-Entwicklung?",
+        answers: ["Apple", "Zoom", "Microsoft", "Facebook"],
+        correctAnswer: 0
+    },
+    {
+        question: "Welche Innovation ist besonders mit Zürich verbunden?",
+        answers: ["Nachhaltige", "Autonome Fahrzeuge", "Social Media", "Computing"],
+        correctAnswer: 0
+    },
+    {
+        question: "Welcher Bereich wird oft mit Scandit in Verbindung gebracht?",
+        answers: ["E-Commerce", "Fintech", "Augmented Reality", "Blockchain"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welcher Start-up wurde nicht bei Zürich genannt?",
+        answers: ["Lakera", "Twint", "Beekeeper", "Futurae"],
         correctAnswer: 1
     }
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let timer;
-let timeLeft = 30;
-
 
 function showQuestion() {
     const questionElement = document.getElementById("question");
@@ -43,46 +65,36 @@ function showQuestion() {
 
     currentQuestion.answers.forEach((answer, index) => {
         answersElements[index].textContent = `${String.fromCharCode(65 + index)}) ${answer}`;
+        answersElements[index].style.backgroundColor = ""; // Reset button color
+        answersElements[index].style.color = "white"; // Reset text color
+        answersElements[index].disabled = false; // Re-enable buttons
     });
 
     statusElement.textContent = `Richtige Antworten: ${score}`;
-    startTimer();
 }
-
-
-function startTimer() {
-    timeLeft = 30;
-    const timerElement = document.getElementById("timer");
-
-    timer = setInterval(() => {
-        timeLeft--;
-        timerElement.textContent = `Zeit: ${formatTime(timeLeft)}`;
-
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            nextQuestion();
-        }
-    }, 1000);
-}
-
-
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
-}
-
 
 function checkAnswer(answerIndex) {
     const currentQuestion = questions[currentQuestionIndex];
+    const answersElements = document.querySelectorAll(".answer");
 
+    // Highlight correct and/or incorrect answers
+    answersElements.forEach((button, index) => {
+        button.disabled = true; // Disable buttons to prevent multiple clicks
+        if (index === currentQuestion.correctAnswer) {
+            button.style.backgroundColor = "green";
+        } else if (index === answerIndex && index !== currentQuestion.correctAnswer) {
+            button.style.backgroundColor = "red";
+        }
+    });
+
+    // Update score if the selected answer is correct
     if (answerIndex === currentQuestion.correctAnswer) {
         score++;
     }
 
-    nextQuestion();
+    // Wait for 2 seconds before showing the next question
+    setTimeout(nextQuestion, 2000);
 }
-
 
 function nextQuestion() {
     currentQuestionIndex++;
@@ -94,7 +106,6 @@ function nextQuestion() {
     }
 }
 
-
 function endQuiz() {
     const questionElement = document.getElementById("question");
     const answersElements = document.querySelectorAll(".answer");
@@ -104,6 +115,5 @@ function endQuiz() {
     answersElements.forEach(button => button.style.display = "none");
     statusElement.textContent = `Du hast ${score} von ${questions.length} richtig beantwortet!`;
 }
-
 
 showQuestion();
