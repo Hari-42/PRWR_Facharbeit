@@ -37,7 +37,7 @@
           <i class="fa-solid fa-bars text-3xl"></i>
         </a>
 </header>
-<div style="background-color: #2563eb; height: 1px;"></div>
+<div class='pt-56'></div>
 
 
 <!-- https://www.startupblink.com/startup-ecosystem/zurich-ch?page=1 -->
@@ -49,7 +49,7 @@
 
 <h2 class="text-2xl font-bold text-gray-800 text-center mt-12 mb-6">Ein Hotspot für IT-Start-ups</h2>
 
-<p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
+<p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto  text-center">
     Die ICT-Startup-Szene in Zürich ist ein führender Innovationshub in Europa, geprägt durch
     die enge Verbindung zur ETH Zürich. Diese liefert Zugang zu Spitzenforschung, Talenten und
     modernster Infrastruktur. Dank internationaler Vernetzung, Risikokapital und Kooperationen
@@ -124,67 +124,73 @@
 
 </section>
 
-<h2 class="text-2xl font-bold text-gray-800 text-center mt-12 mb-6">
+<h2 class="text-2xl font-bold text-gray-800 text-center mt-28 mb-6">
     Warum ist Zürichs ICT-Startup-Szene so erfolgreich?
 </h2>
 <p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
     Hier sind 4 Beispiele
 </p>
 
-<h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-    1.	ETH Zürich und Hochschulnetzwerk
-</h3>
+<div class="relative overflow-hidden mb-20 bg-white shadow-md rounded-lg">
+    <div class="flex transition-transform duration-500 ease-in-out [&>div]:h-[50vh] [&>div]:bg-slate-200	 " id="carousel-items">
+        <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl ">
+            <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                1. ETH Zürich und Hochschulnetzwerk
+            </h3>
+            <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                Die ETH Zürich, eine der weltweit besten technischen Universitäten, bildet die Grundlage
+                für den Innovationsgeist der Region. Mit ihrer Spitzenforschung, internationalen Relevanz
+                und starken Verbindungen zur Industrie treibt sie technologische Entwicklungen maßgeblich
+                voran. Sie bietet Start-ups Zugang zu hochqualifizierten Talenten, modernster Infrastruktur
+                und einem breiten Netzwerk an Partnern, was den Übergang von Forschung zu marktfähigen
+                Produkten erleichtert.
+            </p>
+        </div>
+        <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl  p-4">
+            <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                2. Finanzielle Unterstützung
+            </h3>
+            <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                Start-ups in Zürich profitieren von einer Vielzahl an Finanzierungsmöglichkeiten.
+                Risikokapitalfonds, staatliche Förderprogramme und Innovationswettbewerbe wie Venture Kick
+                oder die Unterstützung durch Stiftungen wie die Schweizerische Innovationsförderagentur
+                Innosuisse sichern die finanzielle Basis für junge Unternehmen. Diese solide Finanzierung
+                erlaubt es Start-ups, innovative Ideen langfristig zu entwickeln und ihre Position auf
+                internationalen Märkten zu festigen.
+            </p>
+        </div>
+        <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl  p-4">
+            <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                3. Internationale Attraktivität
+            </h3>
+            <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                Zürich zieht Talente und Unternehmen aus der ganzen Welt an. Die Stadt bietet eine hohe
+                Lebensqualität, politische und wirtschaftliche Stabilität sowie eine international
+                ausgerichtete Wirtschaft, was sie zu einem attraktiven Standort für Gründer und Fachkräfte
+                macht. Die kulturelle Vielfalt und der Zugang zu globalen Märkten machen Zürich zu einem
+                idealen Ort, um innovative Ideen zu entwickeln und zu skalieren.
+            </p>
+        </div>
+        <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl p-4">
+            <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                4. Starke Zusammenarbeit von Forschung und Industrie
+            </h3>
+            <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                Die enge Zusammenarbeit zwischen akademischen Einrichtungen wie der ETH Zürich und etablierten
+                Unternehmen ist ein zentraler Erfolgsfaktor. Diese Partnerschaften schaffen Synergien, indem
+                sie den Technologietransfer fördern und jungen Unternehmen helfen, schnell auf Ressourcen und
+                Expertise zuzugreifen. Durch diese Dynamik können Start-ups schneller Prototypen entwickeln
+                und innovative Produkte erfolgreich auf den Markt bringen.
+            </p>
+        </div>
+    </div>
 
+    <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2  text-black text-4xl font-bold w-10 h-10 flex items-center justify-center rounded-full">
+        <</button>
+    <button id="next" class="absolute top-1/2 right-4 transform   -translate-y-1/2  text-black text-4xl font-bold w-10 h-10 flex items-center justify-center rounded-full">
+        ></button>
 
-<p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-    Die ETH Zürich, eine der weltweit besten technischen Universitäten, bildet die Grundlage
-    für den Innovationsgeist der Region. Mit ihrer Spitzenforschung, internationalen Relevanz
-    und starken Verbindungen zur Industrie treibt sie technologische Entwicklungen maßgeblich
-    voran. Sie bietet Start-ups Zugang zu hochqualifizierten Talenten, modernster Infrastruktur
-    und einem breiten Netzwerk an Partnern, was den Übergang von Forschung zu marktfähigen
-    Produkten erleichtert.
-</p>
-
-<h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-    2.	Finanzielle Unterstützung
-</h3>
-
-
-<p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-    Start-ups in Zürich profitieren von einer Vielzahl an Finanzierungsmöglichkeiten.
-    Risikokapitalfonds, staatliche Förderprogramme und Innovationswettbewerbe wie Venture Kick
-    oder die Unterstützung durch Stiftungen wie die Schweizerische Innovationsförderagentur
-    Innosuisse sichern die finanzielle Basis für junge Unternehmen. Diese solide Finanzierung
-    erlaubt es Start-ups, innovative Ideen langfristig zu entwickeln und ihre Position auf
-    internationalen Märkten zu festigen.
-</p>
-
-<h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-    3.	Internationale Attraktivität
-</h3>
-
-
-<p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-    Zürich zieht Talente und Unternehmen aus der ganzen Welt an. Die Stadt bietet eine hohe
-    Lebensqualität, politische und wirtschaftliche Stabilität sowie eine international
-    ausgerichtete Wirtschaft, was sie zu einem attraktiven Standort für Gründer und Fachkräfte
-    macht. Die kulturelle Vielfalt und der Zugang zu globalen Märkten machen Zürich zu einem
-    idealen Ort, um innovative Ideen zu entwickeln und zu skalieren.
-</p>
-
-<h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-    4.	Starke Zusammenarbeit von Forschung und Industrie
-</h3>
-
-
-<p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-    Die enge Zusammenarbeit zwischen akademischen Einrichtungen wie der ETH Zürich und etablierten
-    Unternehmen ist ein zentraler Erfolgsfaktor. Diese Partnerschaften schaffen Synergien, indem
-    sie den Technologietransfer fördern und jungen Unternehmen helfen, schnell auf Ressourcen und
-    Expertise zuzugreifen. Durch diese Dynamik können Start-ups schneller Prototypen entwickeln
-    und innovative Produkte erfolgreich auf den Markt bringen.
-</p>
-
+</div>
 
 
 <footer class="bg-blue-200">
@@ -260,6 +266,28 @@
             x.classList.add("hidden");
         }
     }
+
+    const carouselItems = document.getElementById('carousel-items');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentIndex = 0;
+    const totalSlides = carouselItems.children.length;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselItems.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
 </script>
 </body>
 </html>
