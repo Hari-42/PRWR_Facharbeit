@@ -114,6 +114,21 @@ function endQuiz() {
     questionElement.textContent = "Quiz beendet!";
     answersElements.forEach(button => button.style.display = "none");
     statusElement.textContent = `Du hast ${score} von ${questions.length} richtig beantwortet!`;
+
+    // Add the "Zurück zur Startseite" button
+    const homeButton = document.createElement("button");
+    homeButton.textContent = "Zurück zur Startseite";
+    homeButton.classList.add("answer"); // Adding the same style as the answer buttons
+    homeButton.style.backgroundColor = "#4a90e2"; // Blue background like answer buttons
+    homeButton.style.marginTop = "20px"; // Add some margin for spacing
+    homeButton.addEventListener("click", function() {
+        window.location.href = './index.html'; // Redirect to home page
+    });
+
+    // Append the button to the overlay
+    const quizOverlay = document.querySelector(".quiz-overlay");
+    quizOverlay.appendChild(homeButton);
+
 }
 
 showQuestion();

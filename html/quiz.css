@@ -2,7 +2,7 @@
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 20px;
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@
     margin-top: 15px;
 }
 
-.timer, .score {
+.score {
     font-size: 1em;
     color: #333;
 }
