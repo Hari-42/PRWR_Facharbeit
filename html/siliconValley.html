@@ -140,61 +140,49 @@
         Hier sind 4 Beispiele
     </p>
 
-    <h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-        1.	Die Universitäten
-    </h3>
+   
+    <div class="relative overflow-hidden mb-20 bg-white shadow-md rounded-lg">
+        <div class="flex transition-transform duration-500 ease-in-out [&>div]:h-[50vh] [&>div]:bg-slate-200	 " id="carousel-items">
+            <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl ">
+                <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                    1. Die Universitäten
+                </h3>
+                <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                    Nachdem die bekannte Stanford-Uni ins Silicon Valley gezogen ist, sind noch 27 weitere Unis und vier staatliche Forschungszentren dazugekommen. Unis und Tech-Firmen arbeiten hier super zusammen. Laut einer Studie haben aus Stanford etwa 40.000 Unternehmen gestartet, die zusammen 5,4 Millionen Jobs geschaffen haben und einen Umsatz von 2,7 Billionen Dollar machen.
+                </p>
+            </div>
+            <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl  p-4">
+                <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                    2. Staatliche Militär-Forschung
+                </h3>
+                <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                    Am Anfang des Silicon Valley hat der Staat viel Geld für Militärforschung reingesteckt. Dadurch sind die ersten Firmen überhaupt erst hergekommen. Auch heute sind die staatlichen Forschungsprojekte und die Unterstützung für Unis ein wichtiger Grund für den Erfolg. Ausserdem gibt es enge Verbindungen zwischen den Firmen und der Politik. Die Politik hat den Unternehmen mit Sachen wie niedrigen Steuern den Start erleichtert.
+                </p>
+            </div>
+            <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl  p-4">
+                <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                    3. Kapital
+                </h3>
+                <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                    Im Silicon Valley und in San Francisco wohnen über 40 Milliardäre (Stand: 2022). Ihr Geld steckt oft in Firmenanteilen oder Stiftungen. Ansonsten gibt es hier richtig viel Risikokapital, von dem Start-ups profitieren. Manche Banken haben sich sogar darauf spezialisiert, diese Firmen zu finanzieren. Dadurch können sie schnell an viel Geld kommen, um ihre Ideen oder Projekte umzusetzen. Das Zusammenspiel von reichen Leuten, Banken und Investoren macht die Finanzierung im Silicon Valley so besonders.
+                </p>
+            </div>
+            <div class="min-w-full flex flex-col justify-center items-center  text-white text-2xl p-4">
+                <h3 class="text-xl font-bold text-gray-800 text-center  mb-6">
+                    4. Human Ressourcen
+                </h3>
+                <p class="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center text-black">
+                    Die vielen bekannten Unis im Silicon Valley ziehen Talente aus der ganzen Welt an. Viele Studierende bleiben nach ihrem Abschluss gleich bei den Tech-Firmen vor Ort. Ein Studium im Silicon Valley macht es leichter, einen Job in der Tech-Branche zu bekommen. Die Firmen profitieren von den vielen klugen, motivierten und super ausgebildeten Leuten. Viele von denen haben direkt in der Nähe studiert und stehen den Unternehmen danach sofort zur Verfügung.
+                </p>
+            </div>
+        </div>
 
+        <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2  text-black text-4xl font-bold w-10 h-10 flex items-center justify-center rounded-full">
+            <</button>
+        <button id="next" class="absolute top-1/2 right-4 transform   -translate-y-1/2  text-black text-4xl font-bold w-10 h-10 flex items-center justify-center rounded-full">
+            ></button>
 
-    <p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-        Nachdem die bekannte Stanford-Uni ins Silicon Valley gezogen ist, sind noch 27 weitere Unis und vier staatliche Forschungszentren dazugekommen.
-        Unis und Tech-Firmen arbeiten hier super zusammen.
-        Laut einer Studie haben aus Stanford etwa 40.000 Unternehmen gestartet, die zusammen 5,4 Millionen Jobs geschaffen haben und einen Umsatz von 2,7 Billionen Dollar machen.
-
-    </p>
-
-    <h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-        2.	Staatliche Militär-Forschung
-    </h3>
-
-
-    <p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-        Am Anfang des Silicon Valley hat der Staat viel Geld für Militärforschung reingesteckt.
-        Dadurch sind die ersten Firmen überhaupt erst hergekommen.
-        Auch heute sind die staatlichen Forschungsprojekte und die Unterstützung für Unis ein wichtiger Grund für den Erfolg.
-        Ausserdem gibt es enge Verbindungen zwischen den Firmen und der Politik.
-        Die Politik hat den Unternehmen mit Sachen wie niedrigen Steuern den Start erleichtert.
-    </p>
-
-    <h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-        3.	Kapital
-    </h3>
-
-
-    <p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-        Im Silicon Valley und in San Francisco wohnen über 40 Milliardäre (Stand: 2022).
-        Ihr Geld steckt oft in Firmenanteilen oder Stiftungen.
-        Ansonsten gibt es hier richtig viel Risikokapital, von dem Start-ups profitieren.
-        Manche Banken haben sich sogar darauf spezialisiert, diese Firmen zu finanzieren.
-        Dadurch können sie schnell an viel Geld kommen, um ihre Ideen oder Projekte umzusetzen.
-        Das Zusammenspiel von reichen Leuten, Banken und Investoren macht die Finanzierung im Silicon Valley so besonders.
-    </p>
-
-    <h3 class="text-xl font-bold text-gray-800 text-center mt-12 mb-6">
-        4.	Human Ressourcen
-    </h3>
-
-
-    <p class=" text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center">
-        Die vielen bekannten Unis im Silicon Valley ziehen Talente aus der ganzen Welt an.
-        Viele Studierende bleiben nach ihrem Abschluss gleich bei den Tech-Firmen vor Ort.
-        Ein Studium im Silicon Valley macht es leichter, einen Job in der Tech-Branche zu bekommen.
-        Die Firmen profitieren von den vielen klugen, motivierten und super ausgebildeten Leuten.
-        Viele von denen haben direkt in der Nähe studiert und stehen den Unternehmen danach sofort zur Verfügung.
-    </p>
-
-    <br>
-    <br>
-
+    </div>
 
 </main>
 <footer class="bg-blue-200">
@@ -270,6 +258,29 @@
             x.classList.add("hidden");
         }
     }
+
+
+    const carouselItems = document.getElementById('carousel-items');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentIndex = 0;
+    const totalSlides = carouselItems.children.length;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselItems.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
 </script>
 </body>
 </html>
