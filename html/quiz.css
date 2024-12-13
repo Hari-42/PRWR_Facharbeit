@@ -2,7 +2,8 @@
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 20px;
-    width: 400px;
+    width: 90%; /* Ändere die Breite auf einen prozentualen Wert */
+    max-width: 400px; /* Setze eine maximale Breite für größere Bildschirme */
     margin: 0 auto;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -42,4 +43,26 @@
 .score {
     font-size: 1em;
     color: #333;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 600px) {
+    .quiz-overlay {
+        width: 100%; /* Nutze die gesamte Bildschirmbreite */
+        padding: 15px; /* Reduziere den Innenabstand */
+    }
+
+    .question {
+        font-size: 1.2em; /* Verkleinere die Schriftgröße */
+    }
+
+    .answer {
+        font-size: 1em; /* Verkleinere die Schriftgröße */
+        padding: 10px; /* Weniger Padding für Buttons */
+    }
+
+    .status {
+        flex-direction: column; /* Elemente untereinander anordnen */
+        align-items: center;
+    }
 }
